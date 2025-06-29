@@ -16,15 +16,17 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
+        with:
+            version: 10
 
       - name: Install dependencies
-        run: yarn
+        run: pnpm i
 
       - name: build
         env:
           BASE_PATH: 'astro-lab'
         run: |
-          yarn build
+          pnpm build
           touch build/.nojekyll
 
       - name: Upload Artifacts
