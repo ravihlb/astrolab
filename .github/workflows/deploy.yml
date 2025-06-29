@@ -11,11 +11,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+      - name: Install Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
 
-      - name: Install yarn
-        run: corepack prepare yarn@stable --activate
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
 
       - name: Install dependencies
         run: yarn
@@ -28,7 +28,7 @@ jobs:
           touch build/.nojekyll
 
       - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: 'build/'
   
