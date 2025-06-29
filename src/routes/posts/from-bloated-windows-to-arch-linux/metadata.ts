@@ -1,9 +1,8 @@
-import { getDateString } from '@/src/utils/dateutils'
-import type { PostMetadata } from '@/src/shared/types/PostMetadata'
+import type { PostMetadata } from "@/src/shared/types/PostMetadata"
 
 const title = 'From Bloated Windows to Minimal Arch Linux'
 const subtitle = 'A Spectrum of Operating System Bareness'
-const date = getDateString('Mar 16 17:47:16 2024')
+const date = new Date('Mar 16 17:47:16 2024')
 
 const metadata: PostMetadata = {
     title,

@@ -7,7 +7,7 @@
 <section id="post-header">
     <br />
     <strong id="published-on">Published on</strong>
-    {date}
+    {new Date(date).toString()}
     <br />
     <strong id="authored-by">Authored by:</strong>
     <span id="authors">{authors}</span>

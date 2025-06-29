@@ -1,4 +1,4 @@
-import adapter from "@sveltejs/adapter-node";
+import adapter from "@sveltejs/adapter-static";
 import mdsvexConfig from "./mdsvex.config.js";
 import { mdsvex } from "mdsvex";
 import { vitePreprocess } from "@sveltejs/kit/vite";

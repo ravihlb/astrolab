@@ -1,19 +1,24 @@
 <script lang="ts">
-    import PointlessLi from "@components/shared/PointlessLi.svelte";
-    import PostsClient from "@/src/client/posts";
     import type { PostMetadata } from "@/src/shared/types/PostMetadata";
+    import PointlessLi from "@components/shared/PointlessLi.svelte";
+    import writePostMetadata from "@/src/routes/posts/metadata";
 
     let postMetadata: PostMetadata[] = [];
 
-    async function getPostMetadata() {
-        postMetadata = await PostsClient.get();
+    async function getLocalMetadata() {
+        try {
+            const imported = await import("@/src/metadata.json");
+            postMetadata = imported.default as unknown as PostMetadata[];
+        } catch {
+            postMetadata = await writePostMetadata();
+        }
 
-        return postMetadata;
+        postMetadata.sort((a, b) => (a.date > b.date ? -1 : 1));
     }
 </script>
 
 <div>
-    {#await getPostMetadata() then}
+    {#await getLocalMetadata() then}
         {#each postMetadata as metadata}
             <PointlessLi {metadata} />
         {/each}

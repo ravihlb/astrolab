@@ -1,7 +1,7 @@
 export type PostMetadata = {
     title: string,
     subtitle?: string,
-    date: string,
+    date: Date,
     authors: string[],
     URL: string
 }
