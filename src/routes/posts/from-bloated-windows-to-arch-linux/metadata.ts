@@ -1,16 +1,16 @@
-import type PostProperties from '@/src/shared/types/PostProperties'
 import { getDateString } from '@/src/utils/dateutils'
+import type { PostMetadata } from '@/src/shared/types/PostMetadata'
 
 const title = 'From Bloated Windows to Minimal Arch Linux'
 const subtitle = 'A Spectrum of Operating System Bareness'
-const publicationDate = getDateString('Mar 16 17:47:16 2024')
+const date = getDateString('Mar 16 17:47:16 2024')
 
-const propsPost0: PostProperties = {
+const metadata: PostMetadata = {
     title,
     authors: ['ravihlb'],
     subtitle,
-    publicationDate,
+    date: date,
     URL: 'posts/from-bloated-windows-to-arch-linux'
 }
 
-export default propsPost0
+export default metadata

@@ -1,12 +1,21 @@
 <script lang="ts">
-    import posts from '@/src/constants/posts'
-    import PointlessLi from '../shared/PointlessLi.svelte'
+    import PointlessLi from "@components/shared/PointlessLi.svelte";
+    import PostsClient from "@/src/client/posts";
+    import type { PostMetadata } from "@/src/shared/types/PostMetadata";
+
+    let postMetadata: PostMetadata[] = [];
+
+    async function getPostMetadata() {
+        postMetadata = await PostsClient.get();
+
+        return postMetadata;
+    }
 </script>
 
-<html lang="eng">
-    <div>
-        {#each posts as postProps}
-            <PointlessLi props = { postProps } />
+<div>
+    {#await getPostMetadata() then}
+        {#each postMetadata as metadata}
+            <PointlessLi {metadata} />
         {/each}
-    </div>
-</html>
+    {/await}
+</div>

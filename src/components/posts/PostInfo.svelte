@@ -1,15 +1,15 @@
 <script lang="ts">
-    import type { PostProperties } from "@/src/shared/types/PostProperties"
-    export let props: PostProperties
-    const { publicationDate, authors } = props
+    import type { PostMetadata } from "@/src/shared/types/PostMetadata";
+    export let metadata: PostMetadata;
+    const { date, authors } = metadata;
 </script>
 
-<html lang="en">
-    <section id="post-header">
-        <br />
-        <strong id="published-on">Published on</strong> {publicationDate}
-        <br />
-        <strong id="authored-by">Authored by:</strong> <span id="authors">{authors}</span>
-        <br />
-    </section>
-</html>
+<section id="post-header">
+    <br />
+    <strong id="published-on">Published on</strong>
+    {date}
+    <br />
+    <strong id="authored-by">Authored by:</strong>
+    <span id="authors">{authors}</span>
+    <br />
+</section>

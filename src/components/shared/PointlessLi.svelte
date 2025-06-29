@@ -1,16 +1,15 @@
 <script lang="ts">
-    import type { PostProperties } from "@/src/shared/types/PostProperties"
-    import { base } from '$app/paths'
+    import type { PostMetadata } from "@/src/shared/types/PostMetadata";
+    import { base } from "$app/paths";
 
-    export let props: PostProperties
-    const { URL } = props
+    export let metadata: PostMetadata;
 </script>
 
 <html lang="en">
     <li>
-        <a href="{base}/{URL}">{props.title}</a>
+        <a href="{base}/{metadata.URL}">{metadata.title}</a>
         <br />
-        {props.publicationDate}
+        {metadata.date}
     </li>
 </html>
 

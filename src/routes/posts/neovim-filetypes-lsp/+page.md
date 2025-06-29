@@ -1,14 +1,14 @@
 <script lang="ts">
-    import props from './props'
+    import metadata from './metadata'
     import PostTitles from '@components/posts/PostTitles.svelte'
     import PostInfo from '@components/posts/PostInfo.svelte'
 
-    const { title, publicationDate, authors } = props
+    const { title, date, authors } = metadata
     const authorsList = authors.join(', ')
 </script>
 
-<PostTitles props={props} />
-<PostInfo props={props} />
+<PostTitles metadata={metadata} />
+<PostInfo metadata={metadata} />
 <br />
 
 You can use the `filetypes` config within `lspconfig.lsp_name.setup({...})` to override the default filetypes on which a given LSP runs on.

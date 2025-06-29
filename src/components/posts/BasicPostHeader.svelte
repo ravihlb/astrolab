@@ -1,13 +1,13 @@
 <script lang="ts">
-    import type { PostProperties } from '@/src/shared/types/PostProperties'
-    import PostTitles from './PostTitles.svelte'
-    import PostInfo from './PostInfo.svelte'
+    import type { PostMetadata } from "@/src/shared/types/PostMetadata";
+    import PostTitles from "./PostTitles.svelte";
+    import PostInfo from "./PostInfo.svelte";
 
-    export let props: PostProperties
+    export let metadata: PostMetadata;
 </script>
 
 <section id="post-header" lang="en">
-    <PostTitles props={props}/>
-    <PostInfo props={props}/>
+    <PostTitles {metadata} />
+    <PostInfo {metadata} />
     <br />
 </section>

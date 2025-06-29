@@ -1,9 +1,9 @@
 <script lang="ts">
     import PostHeader from '@components/posts/BasicPostHeader.svelte'
-    import props from './props'
+    import metadata from './metadata'
 </script>
 
-<PostHeader props={props}/>
+<PostHeader metadata={metadata}/>
 
 A few weeks ago I stumbled across the channel of fellow blogger [Mischa van den Burg](https://www.youtube.com/@mischavandenburg), which has some really good stuff! 
 

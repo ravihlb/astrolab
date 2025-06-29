@@ -12,16 +12,16 @@
     import PostInfo from '@components/posts/PostInfo.svelte'
     import PostTitles from '@components/posts/PostTitles.svelte'
 
-    import props from './props'
+    import metadata from './metadata'
 
-    const { title, subtitle, publicationDate, authors, coverImg } = props
+    const { title, subtitle, date, authors, coverImg } = metadata
 </script>
 
-<PostTitles props={props} />
+<PostTitles metadata={metadata} />
 <br />
 <ImageContainer src={cover} alt="A completely disassembled Rubik's Cube, its colored pieces lying scattered atop a white background" />
 <br />
-<PostInfo props={props} />
+<PostInfo metadata={metadata} />
 <br />
 
 Nowadays, [about 69% of desktop computer users are using Windows](https://gs.statcounter.com/os-market-share/desktop/worldwide/#monthly-202211-202311).

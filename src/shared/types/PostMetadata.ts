@@ -1,7 +1,7 @@
-export type PostProperties = {
+export type PostMetadata = {
     title: string,
     subtitle?: string,
-    publicationDate: string,
+    date: string,
     authors: string[],
     URL: string
 }

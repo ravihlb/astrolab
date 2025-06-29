@@ -1,23 +1,29 @@
 <script lang="typescript">
-  import PostsList from "../components/posts/PostList.svelte";
+    import PostsClient from "../client/posts";
+    import PostsList from "../components/posts/PostList.svelte";
+
+    async function listPosts() {
+        const response = await PostsClient.get();
+        console.log(response);
+    }
 </script>
 
-<html lang="en" class="main">
-  <h1 class="center-text">
+<h1 class="center-text">
     <span class="accent-color"> Welcome </span>
     to
     <span class="accent-color"> Astrolab </span>
-  </h1>
+</h1>
 
-  <p class="center-text">
+<p class="center-text">
     Here you'll find a compendium of guides and articles about computer science,
     programming, tech and some miscelaneous interesting stuff.
-  </p>
+</p>
 
-  <h2>Posts</h2>
+<button on:click={listPosts}>List Posts, I dare you!</button>
 
-  <PostsList />
-</html>
+<h2>Posts</h2>
+
+<PostsList />
 
 <style lang="css">
     h1 {
