@@ -1,14 +1,5 @@
 [
     {
-        "title": "From Bloated Windows to Minimal Arch Linux",
-        "authors": [
-            "ravihlb"
-        ],
-        "subtitle": "A Spectrum of Operating System Bareness",
-        "date": "2024-03-16T20:47:16.000Z",
-        "URL": "posts/from-bloated-windows-to-arch-linux"
-    },
-    {
         "title": "How to embed custom fonts on a static website with CSS",
         "subtitle": "The joy of setting a handwritten-like monospaced font on your terminal and website",
         "authors": [
@@ -24,5 +15,14 @@
         ],
         "date": "2024-06-25T08:22:00.000Z",
         "URL": "posts/neovim-filetypes-lsp"
+    },
+    {
+        "title": "From Bloated Windows to Minimal Arch Linux",
+        "authors": [
+            "ravihlb"
+        ],
+        "subtitle": "A Spectrum of Operating System Bareness",
+        "date": "2024-03-16T20:47:00.000Z",
+        "URL": "posts/from-bloated-windows-to-arch-linux"
     }
 ]
