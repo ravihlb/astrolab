@@ -24,9 +24,6 @@ jobs:
       - name: Install dependencies
         run: pnpm i
 
-      - name: Generate Posts Metadata JSON
-        run: pnpm tsx scripts/writePostMetadata.ts
-
       - name: build
         env:
           BASE_PATH: 'astro-lab'
