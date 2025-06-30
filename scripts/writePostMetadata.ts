@@ -4,7 +4,7 @@ import type { PluginOption } from "vite";
 
 async function writePostMetadata(): Promise<PluginOption> {
     const promises: Promise<Record<string, PostMetadata>>[] = [];
-    for await (const filepath of fs.glob("src/routes/posts/**/metadata.ts")) {
+    for await (const filepath of fs.glob("./src/routes/posts/**/metadata.ts")) {
         const promise = import("../" + filepath.replace(".ts", ""))
         promises.push(promise as Promise<Record<string, PostMetadata>>)
     }
