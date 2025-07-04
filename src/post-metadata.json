@@ -6,7 +6,7 @@
             "ravihlb"
         ],
         "date": "2024-07-04T08:22:00.000Z",
-        "URL": "posts/how-to-embed-custom-fonts-on-static-website"
+        "path": "posts/how-to-embed-custom-fonts-on-static-website"
     },
     {
         "title": "How to set which filetypes LSPs are run on in Neovim",
@@ -14,7 +14,7 @@
             "ravihlb"
         ],
         "date": "2024-06-25T08:22:00.000Z",
-        "URL": "posts/neovim-filetypes-lsp"
+        "path": "posts/neovim-filetypes-lsp"
     },
     {
         "title": "From Bloated Windows to Minimal Arch Linux",
@@ -23,6 +23,6 @@
         ],
         "subtitle": "A Spectrum of Operating System Bareness",
         "date": "2024-03-16T20:47:00.000Z",
-        "URL": "posts/from-bloated-windows-to-arch-linux"
+        "path": "posts/from-bloated-windows-to-arch-linux"
     }
 ]

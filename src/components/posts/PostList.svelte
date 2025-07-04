@@ -6,7 +6,7 @@
 
     async function getLocalMetadata() {
         const imported = await import("@/src/post-metadata.json");
-        postMetadata = imported.default as PostMetadata[];
+        postMetadata = imported.default as unknown as PostMetadata[];
     }
 </script>
 
