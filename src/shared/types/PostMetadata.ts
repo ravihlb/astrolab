@@ -3,6 +3,6 @@ export type PostMetadata = {
     subtitle?: string
     date: Date | string
     authors: string[]
-    path: string
+    slug: string
 }
 

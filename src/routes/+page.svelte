@@ -1,5 +1,10 @@
-<script lang="typescript">
-    import PostsList from "../components/posts/PostList.svelte";
+<script lang="ts">
+    import { page } from "$app/stores";
+    import { get } from "svelte/store";
+    import type { PostMetadata } from "@/src/shared/types/PostMetadata";
+    import PostsList from "@components/posts/PostList.svelte";
+
+    let posts: PostMetadata[] = get(page).data.posts;
 </script>
 
 <h1 class="center-text">
@@ -15,7 +20,7 @@
 
 <h2>Posts</h2>
 
-<PostsList />
+<PostsList {posts} />
 
 <style lang="css">
     h1 {

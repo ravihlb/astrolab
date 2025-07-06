@@ -2,18 +2,11 @@
     import type { PostMetadata } from "@/src/shared/types/PostMetadata";
     import PointlessLi from "@components/shared/PointlessLi.svelte";
 
-    let postMetadata: PostMetadata[] = [];
-
-    async function getLocalMetadata() {
-        const imported = await import("@/src/post-metadata.json");
-        postMetadata = imported.default as unknown as PostMetadata[];
-    }
+    export let posts: PostMetadata[] = [];
 </script>
 
 <div>
-    {#await getLocalMetadata() then}
-        {#each postMetadata as metadata}
-            <PointlessLi {metadata} />
-        {/each}
-    {/await}
+    {#each posts as metadata}
+        <PointlessLi {metadata} />
+    {/each}
 </div>

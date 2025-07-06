@@ -1,7 +1,3 @@
-<script lang="typescript">
-
-</script>
-
 <html lang="en">
     <div class="card gray-bg">
         <slot />
@@ -9,7 +5,7 @@
 </html>
 
 <style lang="css">
-    @import '../../style/colors.css';
+    @import "../../style/colors.css";
 
     .card {
         width: 100%;

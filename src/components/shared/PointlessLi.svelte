@@ -3,12 +3,12 @@
     import { base } from "$app/paths";
 
     export let metadata: PostMetadata;
-    const { title, path, date } = metadata;
+    const { title, slug, date } = metadata;
 </script>
 
 <html lang="en">
     <li>
-        <a href="{base}/{path}">{title}</a>
+        <a href="{base}/posts/{slug}">{title}</a>
         <br />
         {new Date(date).toDateString()}
     </li>
